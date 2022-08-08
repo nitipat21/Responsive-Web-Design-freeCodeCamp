@@ -1,0 +1,74 @@
+:root{
+    --header-font-size: clamp(1rem, 2.5vw, 4rem);
+    --paragraph-font-size: clamp(1rem, 2.5vw, 2rem); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+input, select, button{
+    font-size: var(--paragraph-font-size);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #000;
+}
+
+textarea{
+    font-size: var(--paragraph-font-size);
+    padding: 1rem;
+    resize: none;
+    max-width: 100%;
+}
+
+.container{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 5vw;
+    padding: 5vw;
+    border-radius: 0.5rem;
+}
+
+header{
+    padding: 2rem 0.5rem;
+    display: grid;
+    text-align: center;
+    gap: 1rem;
+    font-size: var(--header-font-size);
+}
+
+.close-line{
+    border-bottom: 2px solid #000;
+}
+
+form{
+    padding-top: 2vw;
+    font-size: var(--paragraph-font-size);
+    display: grid;
+    gap: 10vw;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#number{
+    width: 4rem;
+}
+
+input:where([type="checkbox"], [type="radio"]){
+
+}
