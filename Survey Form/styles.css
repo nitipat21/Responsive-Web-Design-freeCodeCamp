@@ -15,11 +15,12 @@ body{
     background: linear-gradient(to bottom, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-repeat: no-repeat;
     background-attachment: fixed;
+    justify-content: center ;
 }
 
 input, select, button{
     font-size: var(--paragraph-font-size);
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     border: 2px solid #000;
 }
@@ -38,6 +39,7 @@ textarea{
     margin: 5vw;
     padding: 5vw;
     border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 header{
@@ -66,9 +68,38 @@ form{
 }
 
 #number{
-    width: 4rem;
+    max-width: 5rem;
+    width: 15vw;
 }
 
 input:where([type="checkbox"], [type="radio"]){
-
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
 }
+
+select{
+    cursor: pointer;
+}
+
+#submit{
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#submit:hover{
+    color: #FFF;
+    background-color: #000;
+    transform: scale(1.025);
+}
+
+@media screen and (min-width: 1440px) {
+    form{
+        gap: 4rem;
+    }
+
+    .container{
+        margin: 10vw;
+    }
+  }

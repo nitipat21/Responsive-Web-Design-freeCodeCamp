@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav id="navbar">
-      <header>JS Documentation</header>
-      <ul>
+      <header><h3>JS Documentation</h3></header>
+      <ul class="nav-container">
         <li><a class="nav-link" href="#Introduction">Introduction</a></li>
         <li>
           <a class="nav-link" href="#What_you_should_already_know"
@@ -137,11 +141,10 @@
         <header>Hello world</header>
         <article>
           To get started with writing JavaScript, open the Scratchpad and write
-          your first "Hello world" JavaScript code:
-          <code
-            >function greetMe(yourName) { alert("Hello " + yourName); }
+          your first "Hello world" JavaScript code:<br>
+          <code>function greetMe(yourName) { alert("Hello " + yourName); }
             greetMe("World");
-          </code>
+          </code><br>
 
           Select the code in the pad and hit Ctrl+R to watch it unfold in your
           browser!
@@ -172,17 +175,17 @@
         <article>
           You can declare a variable in three ways:
           <p>
-            With the keyword var. For example, <code>var x = 42.</code> This
+            With the keyword var. For example, <br><code>var x = 42.</code><br> This
             syntax can be used to declare both local and global variables.
           </p>
           <p>
             By simply assigning it a value. For example,
-            <code>x = 42.</code> This always declares a global variable. It
+            <br><code>x = 42.</code><br> This always declares a global variable. It
             generates a strict JavaScript warning. You shouldn't use this
             variant.
           </p>
           <p>
-            With the keyword let. For example,<code> let y = 13.</code> This
+            With the keyword let. For example,<br><code> let y = 13.</code><br> This
             syntax can be used to declare a block scope local variable. See
             Variable scope below.
           </p>
@@ -207,7 +210,7 @@
             function (or global context) within which x is declared, not the
             block, which in this case is an if statement.
           </p>
-          <code>if (true) { var x = 5; } console.log(x); // 5</code>
+          <br><code>if (true) { var x = 5; } console.log(x); // 5</code><br>
           <p>
             This behavior changes, when using the let declaration introduced in
             ECMAScript 2015.
@@ -247,7 +250,7 @@
             and can contain alphabetic, numeric, or underscore characters.
           </p>
 
-          <code>const PI = 3.14;</code>
+          <code>const PI = 3.14;</code><br>
           <p>
             A constant cannot change value through assignment or be re-declared
             while the script is running. It has to be initialized to a value.
@@ -319,7 +322,7 @@
           true. Use the optional else clause to execute a statement if the
           condition is false. An if statement looks as follows:
 
-          <code>if (condition) { statement_1; } else { statement_2; }</code>
+          <br><code>if (condition) { statement_1; } else { statement_2; }</code><br>
           condition can be any expression that evaluates to true or false. See
           Boolean for an explanation of what evaluates to true and false. If
           condition evaluates to true, statement_1 is executed; otherwise,
@@ -333,7 +336,7 @@
             >if (condition_1) { statement_1; } else if (condition_2) {
             statement_2; } else if (condition_n) { statement_n; } else {
             statement_last; }
-          </code>
+          </code><br>
           In the case of multiple conditions only the first logical condition
           which evaluates to true will be executed. To execute multiple
           statements, group them within a block statement ({ ... }) . In
@@ -344,16 +347,16 @@
             >if (condition) { statement_1_runs_if_condition_is_true;
             statement_2_runs_if_condition_is_true; } else {
             statement_3_runs_if_condition_is_false;
-            statement_4_runs_if_condition_is_false; }</code
-          >
+            statement_4_runs_if_condition_is_false; } </code
+          ><br>
           It is advisable to not use simple assignments in a conditional
           expression, because the assignment can be confused with equality when
           glancing over the code. For example, do not use the following code:
-          <code>if (x = y) { /* statements here */ }</code> If you need to use
+          <br><code>if (x = y) { /* statements here */ }</code><br> If you need to use
           an assignment in a conditional expression, a common practice is to put
           additional parentheses around the assignment. For example:
 
-          <code>if ((x = y)) { /* statements here */ }</code>
+          <br><code>if ((x = y)) { /* statements here */ }</code>
         </article>
       </section>
       <section class="main-section" id="while_statement">
@@ -362,7 +365,7 @@
           A while statement executes its statements as long as a specified
           condition evaluates to true. A while statement looks as follows:
 
-          <code>while (condition) statement</code> If the condition becomes
+          <br><code>while (condition) statement</code><br> If the condition becomes
           false, statement within the loop stops executing and control passes to
           the statement following the loop.
 
@@ -384,7 +387,7 @@
             The following while loop iterates as long as n is less than three:
           </p>
 
-          <code>var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }</code>
+          <br><code>var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }</code><br>
           <p>
             With each iteration, the loop increments n and adds that value to x.
             Therefore, x and n take on the following values:
@@ -423,14 +426,14 @@
             square:
           </p>
 
-          <code>function square(number) { return number * number; }</code>
+          <br><code>function square(number) { return number * number; }</code><br>
           <p>
             The function square takes one argument, called number. The function
             consists of one statement that says to return the argument of the
             function (that is, number) multiplied by itself. The return
             statement specifies the value returned by the function.
           </p>
-          <code>return number * number;</code>
+          <br><code>return number * number;</code><br>
           <p>
             Primitive parameters (such as a number) are passed to functions by
             value; the value is passed to the function, but if the function
@@ -447,7 +450,7 @@
               All the documentation in this page is taken from
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
-                target="_blank"
+                target="_blank" id="MDN-link"
                 >MDN</a
               >
             </li>

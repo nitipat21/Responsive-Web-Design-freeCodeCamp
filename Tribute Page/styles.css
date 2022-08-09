@@ -1,0 +1,91 @@
+:root{
+    --header-font-size: clamp(2.5rem, 2.5vw, 4rem);
+    --paragraph-font-size: clamp(1rem, 2.5vw, 2rem); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;;
+}
+
+img{
+    display: block;
+}
+
+body{
+    background-image: url('https://images.pexels.com/photos/55766/pexels-photo-55766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: white;
+    background-size: cover;
+}
+
+main{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 5vw;
+    padding: 5vw;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: grid;
+    gap: 6rem;
+}
+
+.title{
+    text-align: center;
+}
+
+.title h1{
+    font-size: 4rem
+}
+
+.title p{
+    font-size: 2rem
+}
+
+
+li{
+    list-style: none;
+}
+
+#image{
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+#img-caption{
+    margin-top: 0.5rem;
+    line-height: 1.1;
+}
+
+#tribute-info{
+    font-size: var(--paragraph-font-size);
+}
+
+ul{
+    display: grid;
+    gap: 2.5rem;
+}
+
+#closure{
+    margin-block: 4rem;
+}
+
+#tribute-link{
+    color: brown;
+}
+
+#tribute-link:visited{
+    color: green;
+}
+
+@media screen and (min-width: 1024px) {
+    #img-caption{
+        text-align: center;
+    }
+}
+
