@@ -1,0 +1,255 @@
+:root{
+    --header-font-size: clamp(1.5rem, 2.5vw, 4rem);
+    --paragraph-font-size: clamp(1rem, 2.5vw, 2rem);
+    --orange: #F58840;
+    --red-brown: #B85252;
+    --gray: #EADEDE;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+li{
+    list-style: none;
+}
+
+button, #submit{
+    background-color: #F58840;
+    border-color: #F58840;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+button:hover, #submit:hover{
+    border-color: #000;
+    background-color: #000;
+    color: #F58840;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: var(--header-font-size);
+    height: 100%;
+    color: #000;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    color: var(--red-brown);
+}
+
+#header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 2rem 1rem 2rem 0rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    position: fixed;
+    background-color: #fff;
+    z-index: 999;
+}
+
+#nav-bar ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#hero{
+    background-image: url(https://images.pexels.com/photos/7227320/pexels-photo-7227320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#hero-wrapper{
+    position: relative;
+    height: 80vw;
+    max-height: 40rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10vw;
+}
+
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size:var(--paragraph-font-size);
+    display: grid;
+    gap: 1rem;
+}
+
+#email, #submit, button{
+    font-size: var(--paragraph-font-size);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+#form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+
+#features{
+    display: flex;
+    padding-block: 10vw;
+    padding-inline: 2.5vw;
+    gap: 5vw;
+    font-size: var(--paragraph-font-size);
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 4rem;
+    padding: 2.5vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 1rem;
+}
+
+.icon{
+    justify-self: center;
+}
+
+.fa{
+    color: var(--red-brown);
+}
+
+#how-it-works{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+#video{
+    width: 80vw;
+    height: 50vw;
+}
+
+#pricing{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5vw;
+    padding: 2.5vw;
+    font-size: var(--paragraph-font-size);
+}
+
+.product{
+    padding: 5vw;
+    display: grid;
+    gap: 0.5rem;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    border-radius: 1rem
+}
+
+.product h2, .product h3{
+    text-align: center;
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 10vw;
+    font-size: var(--header-font-size);
+}
+
+footer a{
+    color: #fff;
+}
+
+footer a:hover{
+    color: var(--red-brown);
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-evenly;
+    gap:1rem;
+    margin-bottom: 2rem;
+}
+
+#copyright{
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+    #features, footer ul{
+        flex-direction: column;
+        padding-inline: unset;
+    }
+
+    .grid{
+        gap: 1rem;
+        padding: unset;
+        padding-block: 4rem;
+        width: 100vw;
+        margin: 0 auto;
+        border-radius: unset;
+    }
+
+    .desc{
+        padding-inline: 3rem;
+    }
+
+    #nav-bar ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    #form{
+        grid-template-columns: 100%;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    #pricing{
+        grid-template-columns: 100%;
+        padding: 0;
+    }
+
+    .product{
+        justify-content: center;
+        border-radius: unset;
+    }
+
+    #header{
+        grid-template-columns: 100%;
+        gap: 1rem;
+        padding: unset;
+        padding-block: 1rem;
+        position: unset;
+    }
+
+    .logo{
+        padding-right: 2rem;
+    }
+  }
+
