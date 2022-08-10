@@ -245,7 +245,7 @@ footer ul{
         gap: 1rem;
         padding: unset;
         padding-block: 1rem;
-        position: unset;
+        position: fixed;
     }
 
     .logo{
